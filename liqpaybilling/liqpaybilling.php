@@ -33,7 +33,7 @@ if (empty($m))
 		$private_key = $cfg['plugin']['liqpaybilling']['signature'];
 		$public_key = $cfg['plugin']['liqpaybilling']['merchant_id'];
 		$currency = $cfg['plugin']['liqpaybilling']['currency'];
-		$amount = $pinfo['pay_summ']*$cfg['plugin']['liqpaybilling']['rate'];
+		$amount = number_format($pinfo['pay_summ']*$cfg['plugin']['liqpaybilling']['rate'], 2);
 		$result_url = $cfg['mainurl']."/".cot_url('liqpaybilling', "m=result");
 		$server_url = $cfg['mainurl']."/".cot_url('index','r=liqpaybilling');
 		
